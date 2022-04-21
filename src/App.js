@@ -11,12 +11,12 @@ function App() {
         id: Math.random().toString(36).substr(2, 9),
         task: input,
       };
-      setArr([...arr, newTask]);
+      setArr(arr => [...arr, newTask])
     }
   };
 
   const removeTask = (id) => {
-    setArr([...arr.filter((todo) => todo.id !== id)]);
+    setArr(arr=>[...arr.filter((todo) => todo.id !== id)]);
   };
 
   return (
